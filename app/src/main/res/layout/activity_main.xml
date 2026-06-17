@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bgcolor"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_family"
+        android:text="Sticky Notes"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:id="@+id/titlenote"
+        android:textColor="@color/white"
+        android:textColorHint="#673AB7"
+        android:paddingLeft="10dp"
+        android:inputType="textShortMessage"
+        android:background="@drawable/edittext_bg"
+        android:hint="Title"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:background="@drawable/edittext_bg"
+        android:layout_height="wrap_content"
+        android:id="@+id/contentnote"
+        android:hint="Write Note Content"
+        android:textColor="@color/white"
+        android:textColorHint="#673AB7"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="16dp"
+        android:inputType="textMultiLine"
+        android:minLines="5"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/savebutton"
+        android:fontFamily="@font/font_family"
+        android:background="@drawable/button"
+        android:layout_marginTop="16dp"
+        android:text="     Save Note     "
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notes:- "
+        android:textColor="@color/white"
+        android:fontFamily="@font/font_family"
+        android:id="@+id/savednotes"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scrollView"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/notecontainer"
+            android:orientation="vertical"/>
+    </ScrollView>
+
+</LinearLayout>
